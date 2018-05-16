@@ -1,16 +1,24 @@
 function graduates (students) {
     // Code disini
+    if(students.length < 1){
+        return ''
+    } else {
+    var sekolah = {}
     var lulus = {}
-
     for(var i = 0; i < students.length; i++){
         var kelas = students[i].class
-        if(lulus[kelas] === undefined){
-            lulus[kelas] = [{}]
-            lulus[kelas][i].name = students[i].name
-            lulus[kelas][i].score = students[i].name
+        if(sekolah[kelas] === undefined ){       // foxes 
+            sekolah[kelas] = [{name :students[i].name,
+                               score : students[i].score }]
+            
+        } else if(students[i].score > 75){
+            lulus.name = students[i].name
+            lulus.score = students[i].score
+            sekolah[kelas].push(lulus)
         }
     }
-    console.log(lulus)
+    return sekolah
+    }
   }
   
   console.log(graduates([
@@ -46,46 +54,46 @@ function graduates (students) {
   //   ]
   // }
   
-//   console.log(graduates([
-//     {
-//       name: 'Alexander',
-//       score: 100,
-//       class: 'foxes'
-//     },
-//     {
-//       name: 'Alisa',
-//       score: 76,
-//       class: 'wolves'
-//     },
-//     {
-//       name: 'Vladimir',
-//       score: 92,
-//       class: 'foxes'
-//     },
-//     {
-//       name: 'Albert',
-//       score: 71,
-//       class: 'wolves'
-//     },
-//     {
-//       name: 'Viktor',
-//       score: 80,
-//       class: 'tigers'
-//     }
-//   ]));
+  console.log(graduates([
+    {
+      name: 'Alexander',
+      score: 100,
+      class: 'foxes'
+    },
+    {
+      name: 'Alisa',
+      score: 76,
+      class: 'wolves'
+    },
+    {
+      name: 'Vladimir',
+      score: 92,
+      class: 'foxes'
+    },
+    {
+      name: 'Albert',
+      score: 71,
+      class: 'wolves'
+    },
+    {
+      name: 'Viktor',
+      score: 80,
+      class: 'tigers'
+    }
+  ]));
   
-//   // {
-//   //   foxes: [
-//   //     { name: 'Alexander', score: 100 },
-//   //     { name: 'Vladimir', score: 92 }
-//   //   ],
-//   //   wolves: [
-//   //     { name: 'Alisa', score: 76 },
-//   //   ],
-//   //   tigers: [
-//   //     { name: 'Viktor', score: 80 }
-//   //   ]
-//   // }
+  // {
+  //   foxes: [
+  //     { name: 'Alexander', score: 100 },
+  //     { name: 'Vladimir', score: 92 }
+  //   ],
+  //   wolves: [
+  //     { name: 'Alisa', score: 76 },
+  //   ],
+  //   tigers: [
+  //     { name: 'Viktor', score: 80 }
+  //   ]
+  // }
   
   
 //   console.log(graduates([])); //{}

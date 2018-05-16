@@ -9,10 +9,14 @@ function highestScore (students) {
       var kelas = students[i].class       // membuat kelas murid
       /*jika sekolah[kelas] *mean isi dari kelas belum ada(foxes, wolves, tiger), bikin objeknya. atau 
       jika score dari studen lebih besar dari skor kelas yg ada*/
-      if(sekolah[kelas] === undefined || students[i].score < sekolah[kelas].score) {
-        sekolah[kelas] = {}   
-        sekolah[kelas].name = students[i].name  // isi objek tsb 
-        sekolah[kelas].score = students[i].score 
+      if(sekolah[kelas] === undefined || students[i].score > sekolah[kelas].score) {
+        // sekolah[kelas] = {}   
+        // sekolah[kelas].name = students[i].name  // isi objek tsb 
+        // sekolah[kelas].score = students[i].score 
+        // juga bisa menggunakan cara atas
+        sekolah[kelas] = {name : students[i].name,
+                          score : students[i].score}
+
       }
     }
     }
