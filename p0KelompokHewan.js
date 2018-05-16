@@ -1,6 +1,6 @@
 function groupAnimals(animals) {
   // you can only write your code here!
-  animals.sort()
+  
   var kamus = []
   var peternakan = []
 

@@ -1,6 +1,7 @@
 function targetTerdekat(arr) {
   // you can only write your code here!
   var jarak = []
+  var hasil = []
   for(var i = 0; i < arr.length; i++){
       if( arr[i] === 'o'){
         for( var j = 0; j < arr.length; j++){     

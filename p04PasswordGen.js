@@ -72,11 +72,11 @@ function changeVocals (str) {
   
   function passwordGenerator (name) {
     //code di sini
-    var gantivocal = changeVocals(name)
+    // var gantivocal = changeVocals(name)
     var balikkata = reverseWord(gantivocal)
-    var gantiukuran = setLowerUpperCase(balikkata)
-    var hapusspasi = removeSpaces(gantiukuran)
-    return hapusspasi
+    // var gantiukuran = setLowerUpperCase(balikkata)
+    // var hapusspasi = removeSpaces(gantiukuran)
+    // return hapusspasi
  }
   
   console.log(passwordGenerator('Sergei Dragunov')); // 'VPNVGBRdJFGRFs'
