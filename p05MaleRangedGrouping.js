@@ -12,22 +12,22 @@ function meleeRangedGrouping (str) {
     }
     
 
-    // var arrmelee = [] 
-    // var arrranged = []
-    // var induk = []
-    // for(var i = 0; i < arrpisahdash.length; i++){
-    //     for(var j = 0; j < arrpisahdash[i].length; j++){
-    //        if(arrpisahdash[i][j] === 'Ranged'){
-    //            arrranged.push(arrpisahdash[i][0])
-    //        } else if(arrpisahdash[i][j] === 'Melee'){
-    //            arrmelee.push(arrpisahdash[i][0])
-    //        }
-    //     }
-    // }
+    var arrmelee = [] 
+    var arrranged = []
+    var induk = []
+    for(var i = 0; i < arrpisahdash.length; i++){
+        for(var j = 0; j < arrpisahdash[i].length; j++){
+           if(arrpisahdash[i][j] === 'Ranged'){
+               arrranged.push(arrpisahdash[i][0])
+           } else if(arrpisahdash[i][j] === 'Melee'){
+               arrmelee.push(arrpisahdash[i][0])
+           }
+        }
+    }
 
-    // induk.push(arrranged)    
-    // induk.push(arrmelee)
-    // return induk
+    induk.push(arrranged)    
+    induk.push(arrmelee)
+    return induk
     }
 }
   
