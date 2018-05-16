@@ -7,7 +7,7 @@ function graduates (students) {
     var lulus = {}
     for(var i = 0; i < students.length; i++){
         var kelas = students[i].class
-        if(sekolah[kelas] === undefined ){       // foxes 
+        if(sekolah[kelas] === undefined && students[i].score > 75){       // foxes 
             sekolah[kelas] = [{name :students[i].name,
                                score : students[i].score }]
             
