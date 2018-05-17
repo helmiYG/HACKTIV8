@@ -1,10 +1,9 @@
 function highestScore (students) {
     // Code disini
-
-    if(students.length < 1){
-      return ''
-    } else {
     var sekolah = {}
+    if(students.length < 1){
+      return sekolah
+    } else {
     for(var i = 0; i < students.length; i++){
       var kelas = students[i].class       // membuat kelas murid
       /*jika sekolah[kelas] *mean isi dari kelas belum ada(foxes, wolves, tiger), bikin objeknya. atau 

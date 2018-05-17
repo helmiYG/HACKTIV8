@@ -1,9 +1,9 @@
 function graduates (students) {
     // Code disini
-    if(students.length < 1){
-        return ''
-    } else {
     var sekolah = {}
+    if(students.length < 1){
+        return sekolah
+    } else {
     var lulus = {}
     for(var i = 0; i < students.length; i++){
         var kelas = students[i].class

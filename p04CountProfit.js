@@ -5,35 +5,37 @@ function countProfit(shoppers) {
                      ];
     // you can only write your code here!
     let arrayObject = [];
-    
-    for (var o = 0; o < listBarang.length; o++) {           
-        // console.log(listBarang[o])
-        var object = {
-            product: listBarang[o][0],
-            shoppers: [],
-            leftOver: listBarang[o][2],
-            totalProfit: 0
-        }
-        if(shoppers.length === 0){
-            return ''
-        } else{
-        for (var i = 0 ; i < shoppers.length; i++) {
-            if (shoppers[i].product === object.product) {
-                if(object.leftOver >= shoppers[i].amount){
-                    object.shoppers.push(shoppers[i].name)
-                    object.leftOver -= shoppers[i].amount
-                    object.totalProfit += (listBarang[o][1]*shoppers[i].amount)
-                }
+    if(shoppers.length < 1){
+        return arrayObject
+    }else {
+        for (var o = 0; o < listBarang.length; o++) {           
+            // console.log(listBarang[o])
+            var object = {
+                product: listBarang[o][0],
+                shoppers: [],
+                leftOver: listBarang[o][2],
+                totalProfit: 0
             }
-            
+            if(shoppers.length === 0){
+                return ''
+            } else{
+            for (var i = 0 ; i < shoppers.length; i++) {
+                if (shoppers[i].product === object.product) {
+                    if(object.leftOver >= shoppers[i].amount){
+                        object.shoppers.push(shoppers[i].name)
+                        object.leftOver -= shoppers[i].amount
+                        object.totalProfit += (listBarang[o][1]*shoppers[i].amount)
+                    }
+                }
+                
+            }
+            }
+            arrayObject.push(object)
         }
-        }
-        arrayObject.push(object)
+        
+        
+        return arrayObject
     }
-    
-    
-    return arrayObject
-
 }
   
   

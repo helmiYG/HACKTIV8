@@ -2,7 +2,7 @@ function deepSum (arr) {
     // Code disini
     hasil = 0
     if(arr.length < 1){
-        return ''
+        return 'No Number'
     }else{
     for(var i = 0; i < arr.length;i++){
         for(var j = 0; j < arr[i].length; j++)

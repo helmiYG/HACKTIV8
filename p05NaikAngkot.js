@@ -4,7 +4,7 @@ function naikAngkot(arrPenumpang) {
     var arr = []
     var obj = {}
     if(arrPenumpang.length < 1){
-        return ''
+        return arr
     }else {
     for(var i = 0 ; i < arrPenumpang.length; i++){
         obj.penumpang = arrPenumpang[i][0]
