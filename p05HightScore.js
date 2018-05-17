@@ -21,21 +21,6 @@ function highestScore (students) {
     }
     }
     return sekolah
-    // for(var i = 0; i < students.length; i++){
-    //   if(students[i].class === 'foxes' && students[i].score > big){
-    //       foxes.name = students[i].name
-    //       big = students[i].score
-    //       foxes.score = big
-    //   }else if(students[i].class === 'wolves' && students[i].score > big){
-    //       wolves.name = students[i].name
-    //       big = students[i].score
-    //       wolves.score = big
-    //   }
-    // }
-
-
-    // console.log(foxes)
-    // console.log(wolves)
   }
   
   // TEST CASE

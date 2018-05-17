@@ -96,4 +96,4 @@ function graduates (students) {
   // }
   
   
-//   console.log(graduates([])); //{}
+  console.log(graduates([])); //{}
